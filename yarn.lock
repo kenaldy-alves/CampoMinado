@@ -4582,6 +4582,11 @@ react-native-gesture-handler@^1.0.0, react-native-gesture-handler@^1.0.12:
     invariant "^2.2.2"
     prop-types "^15.5.10"
 
+react-native-platform-touchable@^1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/react-native-platform-touchable/-/react-native-platform-touchable-1.1.1.tgz#fde4acc65eea585d28b164d0c3716a42129a68e4"
+  integrity sha1-/eSsxl7qWF0osWTQw3FqQhKaaOQ=
+
 react-native-safe-area-view@^0.11.0:
   version "0.11.0"
   resolved "https://registry.yarnpkg.com/react-native-safe-area-view/-/react-native-safe-area-view-0.11.0.tgz#4f3dda43c2bace37965e7c6aef5fc83d4f19d174"
@@ -4665,6 +4670,13 @@ react-navigation-drawer@1.0.5:
   integrity sha512-WeGrXFn84R75IAt3ndDfkHw9FNvPsi4JPGO1iopqUoA/2tMPA6WJbhuE3dqmmEu3TZRjI+2LatCgpx00tT1kiQ==
   dependencies:
     react-native-tab-view "^1.2.0"
+
+react-navigation-header-buttons@^2.1.1:
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/react-navigation-header-buttons/-/react-navigation-header-buttons-2.1.1.tgz#7f388a3fafd5c9510e144f6dcd5cf0793e27c826"
+  integrity sha512-ZWqwvdOBDduAGr1WpmHWbCMmSx9ZpuKdnFOByt9iOSZwwQwMP2f98rkePAlYXlTcThgaqbpdt7jcktAcG056fA==
+  dependencies:
+    react-native-platform-touchable "^1.1.1"
 
 react-navigation-stack@1.0.5:
   version "1.0.5"

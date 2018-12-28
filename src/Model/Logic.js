@@ -32,7 +32,7 @@ const spreadMines = (board, minesAmount) => {
 }
 
 const getNeighbors = (board, row, column) => {
-    const neighbors  = []
+    const neighbors = []
     const rows = [row - 1, row, row + 1]
     const columns = [column - 1, column, column + 1]
 
@@ -88,6 +88,12 @@ const wonGame = board => fields(board).filter(pendding).length === 0
 
 const showMines = board => fields(board).filter(field => field.mined).forEach(field => field.opened = true)
 
+const setFlag = (board, row, column) => {
+    const field = board[row][column]
+    field.flagged = !field.flagged
+}
+
+
 const createMinedBoard = (rows, columns, minesAmount) => {
     console.log(rows, columns)
     const board = createBoard(rows, columns)
@@ -96,10 +102,18 @@ const createMinedBoard = (rows, columns, minesAmount) => {
     return board
 }
 
-export { createMinedBoard, 
-        openField,
-        cloneBoard,
-        hadExplosion,
-        wonGame,
-        showMines
-    }
+const flagsUsed = board => fields(board).filter(field => field.flagged).length 
+
+const numMines = board => fields(board).filter(field => field.mined).length
+
+export {
+    createMinedBoard,
+    openField,
+    cloneBoard,
+    hadExplosion,
+    wonGame,
+    showMines,
+    setFlag,
+    flagsUsed,
+    numMines
+}
